@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Animação</title>
+
+<style>
+/*Animação*/
+
+#rato:hover {
+	animation: letras .4s;
+}
+
+@keyframes letras{
+	10%, 50%,100% {transform: translateY(-10%);}
+	25%, 75%,80% {transform: translateY(-10%);}
+}
+
+
+/*---- Animação com imagem-----*/
+.correr {
+	background-image: url('rapaz.png');
+	width: 256px;
+	height: 256px;
+	animation: M_correr .9s steps(6) infinite; /*keyframe Mcorrer*/
+}	
+@keyframes M_correr {
+	from {background-position: 0px;}
+	to {background-position: -3100px;}
+}
+
+/*Animação - Imagem- Matrix*/
+.raposa{
+	background-image: url('raposa.png');
+	/*4 altura/ 1932 = 483*/
+	/*2 largura/ 1098 = 549*/
+	width:549px;
+	height:483px;
+	animation:raposaX 1s steps(2) infinite,
+			raposay 3s steps(4) infinite;
+}
+
+
+
+/*RaposaX*/	
+@keyframes raposaX {
+	from {background-position-x: 0px;}
+	to {background-position-x: -1098px;}
+}
+/*Raposa Y*/
+	
+@keyframes raposay {
+	from {background-position-y: 0px;}
+	to {background-position-y: -1932px;}
+}
+
+/*Animação blob*/
+.blob{
+	background-image: url('blob.png');
+	width: 95px; 
+	height:140px;
+	animation: blobx 1s steps(6) infinite,
+				bloby 3s steps(4) infinite;
+}
+
+}
+
+/*blobx animação*/
+@keyframes blobx {
+	from{background-position-x: 0px;}
+	to{background-position-x:-559px;}
+}
+
+
+
+/*bloby animação*/
+@keyframes bloby {
+	from{background-position-y: 0px;}
+	to{background-position-y:-634px;}
+}
+
+</style>
+
+</head>
+<body>
+
+
+<h1 id="rato"> Animação+HTML+CSS+ rato</h1>
+
+
+<div class="correr"></div>
+
+<div class="raposa"></div>
+
+<div class="blob"></div>
+
+
+
+
+
+
+
+
+
+
+	
+</body>
+</html>
